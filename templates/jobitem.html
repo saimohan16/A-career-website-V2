@@ -1,4 +1,8 @@
-<div style="margin-top: 4px;"> <h4 style="color:cornflowerblue; margin-bottom: 4px;">{{job['title']}}</h4></div>
+<div class= "border-bottom row"  style="margin-top: 4px;padding-bottom: 8px;"> 
+    
+    <div class="col-9">
+        <h4 style="color:cornflowerblue; margin-bottom: 4px;">{{job['title']}}</h4>
+    
 
 <div>
     <b>Location:</b>{{job['location']}}
@@ -9,3 +13,7 @@
     <div> <b>Salary:</b> {{job['salary']}}</div>
 
     {% endif %}
+</div>
+    <!--Building columns to add button in side part of the-->
+<div class="col-3"><button type="button" class="btn btn-outline-primary">Apply</button></div>
+</div>
