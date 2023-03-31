@@ -48,7 +48,9 @@
         #banner{
             height: 360px;
             width:100%;
-            object-fit: cover
+            object-fit: cover;
+            margin: top 4px;
+            margin-bottom:-300 px
 
         }
 
@@ -56,15 +58,21 @@
         <title> mohan </title>
         <body>
             {% include 'nav.html' %}
+            <img class = 'img-fluid'id = banner src ='static\banner.jpg' height="120px" >
+                        
             <!--<div id="container">-->
             <div class="container">
-            <h1 class="text-center mt-2 mb-4"> {{company_name}} career page</h1>
+            <h1 class="text-center"> {{company_name}} career page</h1>
             <!--added images using the static page--> 
-            <img class = 'img-fluid'id = banner src ='static\banner.jpg' height="320px" > 
-            <h2 class="text-center mt-2 mb4"> About career </h2>
+            <!--<img class = 'img-fluid'id = banner src ='static\banner.jpg' height="320px" > -->
+            <!--<h2 class="text-center mt-2 mb4"> About career </h2>-->
             <!-- <p class = 'bodytext' > -->
-            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Feugiat vivamus at augue eget arcu dictum varius. Cursus in hac habitasse platea dictumst. Mauris rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar pellentesque. In aliquam sem fringilla ut morbi tincidunt augue. Fringilla phasellus faucibus scelerisque eleifend donec. Tellus in metus vulputate eu scelerisque felis imperdiet proin fermentum. Mi quis hendrerit dolor magna eget est lorem ipsum dolor. Et sollicitudin ac orci phasellus egestas tellus rutrum. Nec feugiat in fermentum posuere urna. Nunc mattis enim ut tellus elementum sagittis. Turpis tincidunt id aliquet risus feugiat in.</p>
-            <h2> Open Positions </h2>
+            <div class="row margin-bottom:16px">
+            <div class="col-md-6"><p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Feugiat vivamus at augue eget arcu dictum varius. Cursus in hac habitasse platea dictumst. Mauris rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar pellentesque. In aliquam sem fringilla ut morbi tincidunt augue. Fringilla phasellus faucibus scelerisque eleifend donec. Tellus in metus vulputate eu scelerisque felis imperdiet proin fermentum. Mi quis hendrerit dolor magna eget est lorem ipsum dolor. Et sollicitudin ac orci phasellus egestas tellus rutrum. Nec feugiat in fermentum posuere urna. Nunc mattis enim ut tellus elementum sagittis. Turpis tincidunt id aliquet risus feugiat in.</p>
+            </div>
+            <div class="d-none d-md-block col-md-6"><img class = 'img-fluid' src ='static\annie-spratt-QckxruozjRg-unsplash.jpg' height="320px" style="border-radius: 4px;" ></div>
+            </div>
+            <h2 class="text-center margin-top:16px"> Open Positions </h2>
             <div> 
             <!--{{jobs}}-->
             {% for job in jobs %}
@@ -75,13 +83,17 @@
 
 
             </div>
+            
+            
+            
             <!-- <div style="text-align: center;">{inline styling in css} -->
             <div class="text-center">
-            <button margin="auto" class="btn btn-primary btn-lg">contact us</button>
-            <p > copyright 2022</p>
+            <a href="mailto: mohan@email.com?subject=Question%20about%20job%20openings&body=name%3A%20%3CPut%20your%20name%20here%3E%0D%0AMy%20question%3A%20%3CAsk%20anything%3E" type="button" style="margin-top: 10px;" 
+            margin="auto" class="btn btn-primary btn-lg">contact us</a>
+            <!--<p > copyright 2022</p>-->
             </div>
             </div>
-            {% include 'footer.html'%}
+        {% include 'footer.html' %}
         </body>
     </head>
 </html>
