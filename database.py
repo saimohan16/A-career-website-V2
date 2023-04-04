@@ -7,8 +7,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 key = os.getenv('DB_key')
-#key = "mysql+pymysql://c05j7fmk9givt637tudf:pscale_pw_J71SBucqiPfQsydeBsep15Bdx0JHIQioWPU9AtCIngD@aws.connect.psdb.cloud/a_careers?charset=utf8mb4"
-
+hello = 'str'
 db_connection = f"{key}"
 engine = create_engine(db_connection, connect_args={
         "ssl": {
