@@ -18,13 +18,13 @@ engine = create_engine(db_connection, connect_args={
 
 
 
-with engine.connect() as conn:
-    result = conn.execute(text('select * from jobs'))
-    #print('type of restult:', type(result))
-    result_all = result.all() 
-    dict_result_all = []
-    for j in range(len(result_all)):
-        dict_result_all.append(dict(result_all[j]))
+# with engine.connect() as conn:
+#     result = conn.execute(text('select * from jobs'))
+#     #print('type of restult:', type(result))
+#     result_all = result.all() 
+#     dict_result_all = []
+#     for j in range(len(result_all)):
+#         dict_result_all.append(dict(result_all[j]))
     # print('type of result_all:', type(result_all))
     # print(type(result_all[0]))
     # print(result_all[0])
