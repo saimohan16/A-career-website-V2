@@ -33,9 +33,9 @@ with engine.connect() as conn:
 def load_jobs_from_db():
     with engine.connect() as conn:
         result = conn.execute(text('select * from jobs'))
-        print('type of restult:', type(result))
+        # print('type of restult:', type(result))
         #result_all = result.all()
-        jobs = []
+        result_dict = []
         for j in result.all():
-            jobs.append(dict(j))
-    return jobs
+            result_dict.append(dict(j))
+    return result_dict
